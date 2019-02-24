@@ -20,9 +20,14 @@ class NFLPlayer
     @team = input_player[:team]
     @active =input_player[:active]
   end
+  
+  def draft_info
+    p "#{player_name} was drafted from #{player_school} in #{draft_position} by the #{team}."
+  end
 end
 
 player1 = NFLPlayer.new(player_name: "Troy Polumalu", player_school: "USC", draft_position: "2003, Round 1, Pick 16" , height: "5ft. 10in", weight: 207, team: "Pittsburgh Steelers", active: false)
+
 
 
 # p player1.player_name
@@ -41,4 +46,6 @@ player1 = NFLPlayer.new(player_name: "Troy Polumalu", player_school: "USC", draf
 
 # player1 = NFLPlayer.new(player_name: "Troy Polumalu", player_school: "USC", draft_position: "2003, Round 1, Pick 16")
 
-p "#{player1.player_name} was drafted from #{player1.player_school} in #{player1.draft_position} by the #{player1.team}."
+# p "#{player1.player_name} was drafted from #{player1.player_school} in #{player1.draft_position} by the #{player1.team}."
+
+player1.draft_info
